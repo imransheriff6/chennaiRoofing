@@ -1,0 +1,83 @@
+@import '../../App.scss';
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 3%;
+    position: fixed;
+    top: 0;
+    width: 94%;
+    z-index: 9999;
+    background-color: $primary3;
+    box-shadow: 0 0 10px grey;
+
+
+
+    .navpart2 {
+        width: 40%;
+        display: flex;
+        justify-content: space-evenly;
+
+        a {
+            text-decoration: none;
+            color: $primary2;
+            font-size: 1rem;
+            font-weight: 600;
+            border: 2px solid $primary3;
+        }
+    }
+
+    .navpart3 {
+        background-color: $primary2 ;
+        padding: .5% .7%;
+        border-radius: 5px;
+
+        .i {
+            color: $primary3;
+            font-size: 1.3rem;
+        }
+    }
+
+}
+
+.slide {
+    position: fixed;
+    z-index: 999;
+    width: 20%;
+    top: 0;
+    right: 0;
+    background-color: $primary3;
+    padding: 1% 2% 3% 5%;
+    box-shadow: 0 0 15px grey;
+
+    h2 {
+        color: $primary2;
+    }
+
+    .f-icon {
+        color: $primary2;
+    }
+
+    .icon {
+        margin-top: 7%;
+        display: flex;
+    }
+
+    .icon .social {
+        transition: none;
+    }
+
+    .one1 span {
+        border-radius: 50%;
+        color: $primary2;
+        border: 2px solid $primary2;
+        padding: 2% 1.8%;
+        margin-right: 2%;
+        width: 7%;
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+    }
+}
