@@ -1,0 +1,108 @@
+@import '../../App.scss';
+
+.card {
+    width: 28%;
+    padding: 1%;
+    border-radius: 18px;
+    transition: 1s ease-in-out;
+
+
+
+    .part1 {
+        width: 100%;
+        height: 19rem;
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        border: 2px solid $primary3;
+
+
+        .icondiv {
+            width: 18%;
+            position: absolute;
+            top: 5%;
+            right: 5%;
+            z-index: 999;
+
+            img {
+                border-radius: 10px;
+            }
+        }
+
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .part2 {
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+        z-index: 99;
+        height: auto;
+        width: 100% !important;
+        height: 100%;
+        text-align: start;
+        padding: 0 5%;
+        display: flex;
+        align-items: end;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+
+
+        h2 {
+            margin: 0;
+            color: $primary3;
+            font-size: 2rem;
+            width: 100%;
+            z-index: 99;
+            position: relative;
+        }
+
+        p {
+            display: none;
+            z-index: 99;
+            position: relative;
+            font-size: 1.1rem;
+            animation-name: updown;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+
+        }
+
+        @keyframes updown {
+            0% {
+                transform: translateY(100%);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+    }
+}
+
+.card:hover .part2::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: $primary2;
+    top: 0;
+    left: 0;
+    opacity: .7;
+}
+
+.card:hover .part2 p {
+    display: block;
+    color: $primary3;
+}
+
+.card:hover .part2 h2 {
+
+    animation-name: updown;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
