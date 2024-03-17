@@ -1,0 +1,220 @@
+@import '../../App.scss';
+
+.block {
+    width: 27%;
+    text-align: center;
+    padding: 3% 2%;
+    transition: all 1s ease !important;
+    border-radius: 10px;
+    // border: 2px solid $primary2;
+    box-shadow: 0 0 45px rgba(0, 0, 0, 0.07);
+
+
+    .float {
+        position: absolute;
+        top: -20%;
+        left: 10%;
+        background-color: $primary3;
+        height: 8rem;
+        width: 8rem;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        box-shadow: 0 0 6px grey;
+        color: $primary2;
+        transition: all 0.2s;
+    }
+
+
+    .i {
+        font-size: 3.5rem;
+    }
+
+    h1 {
+        color: $primary2;
+    }
+
+    .content {
+        padding: 1% 5%;
+        height: 6rem;
+        font-weight: 600;
+        color: #7A7A7A;
+        overflow: hidden;
+    }
+
+
+    a {
+        border: 3px solid $primary2;
+        text-decoration: none;
+        color: $primary2;
+        background-color: $primary3;
+        font-size: 1.2rem;
+        height: 3rem;
+        width: 3rem;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        font-weight: 400;
+        margin-left: 7%;
+    }
+
+    .inOut {
+        position: absolute;
+        top: 0;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        display: none;
+        padding: 15% 0 0;
+        z-index: -1;
+
+        .i {
+            font-size: 8rem !important;
+            color: $primary2;
+            opacity: .5;
+        }
+    }
+}
+
+.block:hover {
+    // border: 2px solid $primary2;
+}
+
+.block:hover .float {
+    background-color: $primary3 ;
+    color: $primary2;
+}
+
+.block:hover .inOut {
+    display: block !important;
+}
+
+.block:hover .content {
+    color: black;
+}
+
+
+.block:hover .inOut::before {
+    width: 100%;
+    height: 83%;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.service-item {
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 0 45px rgba(0, 0, 0, 0.07);
+    width: 27%;
+    text-align: center;
+    padding: 3% 2%;
+    .i {
+        font-size: 3.5rem;
+    }
+    :hover .i{
+        color: $primary2;
+    } 
+  }
+  
+  .service-item .service-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: -1;
+    display: grid;
+    place-content: center;
+  }
+  
+  .service-item .service-img img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .service-item .service-img::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: $primary2_fade;
+    border-radius: 10px;
+    z-index: 1;
+  }
+  
+  .service-item .service-img::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #ffffff;
+    transition: 0.5s ease-out;
+    z-index: 2;
+  }
+  
+  .service-item:hover .service-img::after {
+    width: 0;
+    left: auto;
+    right: 0;
+  }
+  
+  .service-item .service-text .service-icon {
+    width: 100px;
+    height: 100px;
+    padding: 15px;
+    margin-top: -104px;
+    margin-bottom: 40px;
+    background: #ffffff;
+    border-radius: 140px;
+    overflow: hidden;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.1);
+    place-items: center;
+    display: grid;
+  }
+  
+  .service-item .service-text h1,
+  .service-item .service-text p {
+    transition: 0.5s;
+  }
+  
+  .service-item:hover .service-text h1,
+  .service-item:hover .service-text p {
+    color: #ffffff;
+  }
+  .service-item:hover .service-text .btn{
+    color:$primary2
+  }
+  
+  .service-item .service-text .btn {
+    color: var(--secondary);
+    background: #ffffff;
+    box-shadow: 0 0 45px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s;
+  }
+  
+//   .service-item .service-text .btn:hover {
+//     color: var(--dark);
+//     background: var(--secondary);
+//   }
+.btn-square {
+    display: flex;
+    width: 38px;
+    height: 38px;
+    place-items: center;
+    justify-content: center;
+    border-radius: 20%;
+    color: $primary2;
+}
