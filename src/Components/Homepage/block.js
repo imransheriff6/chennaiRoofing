@@ -4,16 +4,16 @@ import { FaAnglesRight, FaCheckDouble } from "react-icons/fa6";
 function Block(p) {
   return (
     <div
-      class="service-item d-flex h-100"
+      className="service-item d-flex h-100"
       data-aos={p.anime}
       data-aos-delay={p.delay}
     >
-      <div class="service-img">{p.icon}</div>
-      <div class="service-text p-5 pt-0">
-        <div class="service-icon">{p.icon}</div>
-        <h1 class="mb-3">{p.title}</h1>
-        <p class="mb-4">{p.content}</p>
-        <a class="btn btn-square rounded-circle">
+      <div className="service-img">{p.icon}</div>
+      <div className="service-text p-5 pt-0">
+        <div className="service-icon">{p.icon}</div>
+        <h1 className="mb-3">{p.title}</h1>
+        <p className="mb-4">{p.content}</p>
+        <a className="btn btn-square rounded-circle">
           <FaAnglesRight />
         </a>
       </div>

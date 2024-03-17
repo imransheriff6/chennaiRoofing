@@ -1,5 +1,5 @@
 import "./Nav.scss";
-import bg from "../Images/logo.png";
+import bg from "../../Images/logo.png";
 import { Link } from "react-router-dom";
 import { FaBars, FaCross, FaEnvelope, FaFacebookF, FaInstagram, FaLinkedinIn, FaMapPin, FaPhone, FaPinterest, FaTwitter, FaXmark, FaYoutube } from "react-icons/fa6";
 import { useEffect, useState } from "react";
@@ -14,11 +14,11 @@ function Nav() {
                 <img src={bg} alt="404 Not found" />
             </div>
             <div className="navpart2">
-                <Link to={"/"}>Home</Link>
-                <Link to={"/"}>About Us</Link>
-                <Link to={"/"}>Services</Link>
-                <Link to={"/"}>Gallery</Link>
-                <Link to={"/"}>Contact</Link>
+                <Link to={"/"} ><span className="underline-closing">Home</span></Link>
+                <Link to={"/"} className="underline-closing">About Us</Link>
+                <Link to={"/"} className="underline-closing">Services</Link>
+                <Link to={"/"} className="underline-closing">Gallery</Link>
+                <Link to={"/"} className="underline-closing">Contact</Link>
             </div>
             <div className="contact-info">
                 <div className="contact">

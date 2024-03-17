@@ -10,8 +10,8 @@
     top: 0;
     width: 94%;
     z-index: 9999;
-    background-color: $navbar-fade;
-    box-shadow: 0 0 10px grey;
+    // background-color: $navbar-fade;
+    // box-shadow: 0 0 10px grey;
 
 
 
@@ -159,4 +159,36 @@
         }
     }
 
+}
+.underline-closing:after,
+.underline-closing:before{
+    position: absolute;
+    z-index: -1
+}
+.underline-closing:after {
+    content: "";
+    width: 3px;
+    height: 3px;
+    bottom: 0;
+    left: 0
+}
+
+.underline-closing:focus:after,
+.underline-closing:hover:after {
+    width: 50%;
+    height: 3px
+}
+
+.underline-closing:before {
+    content: "";
+    width: 3px;
+    height: 3px;
+    bottom: 0;
+    right: 0
+}
+
+.underline-closing:focus:before,
+.underline-closing:hover:before {
+    width: 50%;
+    height: 3px
 }

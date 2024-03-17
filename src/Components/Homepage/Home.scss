@@ -37,12 +37,12 @@
 
     .zoom {
         position: absolute;
-        width: 100vw;
+        width: 100%;
         height: 100%;
-        animation-name: topscroll;
-        animation-duration: 40s;
-        animation-iteration-count: infinite;
-        display: flex;
+        // animation-name: topscroll;
+        // animation-duration: 40s;
+        // animation-iteration-count: infinite;
+        // display: flex;
 
 
         img {
@@ -52,19 +52,19 @@
     }
 
 
-    @keyframes topscroll {
-        0% {
-            transform: translateX(0%);
-        }
+    // @keyframes topscroll {
+    //     0% {
+    //         transform: translateX(0%);
+    //     }
 
-        50% {
-            transform: translateX(-100%);
-        }
+    //     50% {
+    //         transform: translateX(-100%);
+    //     }
 
-        100% {
-            transform: translateX(-200%);
-        }
-    }
+    //     100% {
+    //         transform: translateX(-200%);
+    //     }
+    // }
 
 
     .overlay {
@@ -236,7 +236,7 @@
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    background-image: url(../Images/bg-img.jpg);
+    background-image: url(../../Images/bg-img.jpg);
     background-size: 100% 100%;
     background-attachment: fixed;
 }
@@ -299,7 +299,7 @@
 
 
 .Why_us {
-    background-image: url(../Images/roof1.jpg);
+    background-image: url(../../Images/roof1.jpg);
     background-size: 100% 100%;
     position: relative;
     margin-top: 2%;
