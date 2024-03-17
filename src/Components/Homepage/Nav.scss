@@ -71,7 +71,6 @@
         .icon-div {
             width: 30%;
             display: flex;
-            // justify-content: space-evenly;
             align-items: center;
 
             a {
@@ -88,9 +87,9 @@
         content: "";
         position: absolute;
         top: 0;
-        left: -3%;
-        border-top: 49px solid $primary1;
-        border-left: 32px solid transparent;
+        left: -5%;
+        border-top: 48.5px solid $primary1;
+        border-left: 51px solid transparent;
         border-bottom: 0 solid transparent;
         border-right: 0 solid transparent;
     }

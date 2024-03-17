@@ -1,25 +1,18 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
-import bg1 from "../Images/Content 1.jpg";
-import bg2 from "../Images/Content 2.jpg";
-import bg3 from "../Images/Content 3.jpg";
+import bg4 from "../Images/service-1.jpg";
+import "./carousel.scss"
 
 function DarkVariantExample() {
     return (
-        <Carousel>
-            <div>
-                <img src={bg1} />
-                <p className="legend">Legend 1</p>
-            </div>
-            <div>
-                <img src={bg2} />
-                <p className="legend">Legend 2</p>
-            </div>
-            <div>
-                <img src={bg3} />
-                <p className="legend">Legend 3</p>
-            </div>
-        </Carousel>
+        <figure class="snip1543">
+            <img src={bg4} alt="sample108" />
+            <figcaption>
+                <h3>Inverness McKenzie</h3>
+                <p>The only skills I have the patience to learn are those that have no real application in life.</p>
+            </figcaption>
+            <a href="#"></a>
+        </figure>
     );
 }
 

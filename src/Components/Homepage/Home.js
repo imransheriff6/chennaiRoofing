@@ -230,69 +230,66 @@ function Home() {
       {/* About */}
 
       <div className="about">
-        <div className="tag">
-          <div data-aos={'flip-down'} data-aos-delay={200}>
-            <h1>15</h1>
-            <p>Years Experience</p>
+        <div className="section1">
+          <div className="part1" data-aos={'fade-left'} data-aos-delay={200}>
+            <img src={bg1} alt="404" />
+          </div>
+          <div className="part2">
+            <h1 className="h1">About</h1>
+            <h1>Smart Roofs and Fabs</h1>
+            <p>
+              Industrial Roofing Contractors in Chennai with advanced roofing
+              solutions for Industrial roofing sector are provided by
+              Chennairoofings to shield your operations from the elements. You can
+              choose from a variety of materials like durable metal sheets,
+              innovative composite panels and energy-efficient green roofs for
+              your industrial roofing. Chennairoofings offers comprehensive
+              services from installation and maintenance to emergency repairs and
+              roof replacements. As a leading contractor we provide Pre-engineered
+              Building(PEB), Factory sheds, Metal building, Industrial sheds,
+              Warehouse shed, EOT shed and Mezzanine floor.
+            </p>
           </div>
         </div>
-        <div className="part1" data-aos={'fade-left'} data-aos-delay={200}>
-          <img src={bg1} alt="404" />
+        <div className="section2">
+          <div className="part3">
+            <h1>Value for Money</h1>
+            <p>
+              As Chennai's finest industrial roofing contractors and also
+              excellent commercial roofers in Chennai, offering comprehensive
+              solutions for businesses of all sizes. Choosing the right industrial
+              roofing contractor is an investment in the longevity and
+              productivity for your project management. We offer exceptional value
+              with competitive pricing and comprehensive warranties. We also
+              provide Marriage hall construction, Rice mill construction, Poultry
+              &EC farm construction with transparent quotes and comprehensive
+              warranties. Contact us today and experience the difference a
+              reliable, expert roof makes.
+            </p>
+          </div>
+          <div className="part4" data-aos={'fade-right'} data-aos-delay={200}>
+            <img src={bg2} alt="404" />
+          </div>
         </div>
-        <div className="part2">
-          <h1 className="h1">About</h1>
-          <h1>Smart Roofs and Fabs</h1>
-          <p>
-            Industrial Roofing Contractors in Chennai with advanced roofing
-            solutions for Industrial roofing sector are provided by
-            Chennairoofings to shield your operations from the elements. You can
-            choose from a variety of materials like durable metal sheets,
-            innovative composite panels and energy-efficient green roofs for
-            your industrial roofing. Chennairoofings offers comprehensive
-            services from installation and maintenance to emergency repairs and
-            roof replacements. As a leading contractor we provide Pre-engineered
-            Building(PEB), Factory sheds, Metal building, Industrial sheds,
-            Warehouse shed, EOT shed and Mezzanine floor.
-          </p>
-        </div>
-        <div className="hide-part1">
-          <img src={bg3} alt="404" />
-        </div>
-        <div className="part3">
-          <h1>Value for Money</h1>
-          <p>
-            As Chennai's finest industrial roofing contractors and also
-            excellent commercial roofers in Chennai, offering comprehensive
-            solutions for businesses of all sizes. Choosing the right industrial
-            roofing contractor is an investment in the longevity and
-            productivity for your project management. We offer exceptional value
-            with competitive pricing and comprehensive warranties. We also
-            provide Marriage hall construction, Rice mill construction, Poultry
-            &EC farm construction with transparent quotes and comprehensive
-            warranties. Contact us today and experience the difference a
-            reliable, expert roof makes.
-          </p>
-        </div>
-        <div className="part4" data-aos={'fade-right'} data-aos-delay={200}>
-          <img src={bg2} alt="404" />
-        </div>
-        <div className="part5" data-aos={'fade-left'} data-aos-delay={200}>
-          <img src={bg3} alt="404" />
-        </div>
-        <div className="part6">
-          <h1>Value for Money</h1>
-          <p>
-            As Chennai's finest industrial roofing contractors and also
-            excellent commercial roofers in Chennai, offering comprehensive
-            solutions for businesses of all sizes. Choosing the right industrial
-            roofing contractor is an investment in the longevity and
-            productivity for your project management. We offer exceptional value
-            with competitive pricing and comprehensive warranties. We also
-            provide Marriage hall construction, Rice mill construction, Poultry
-            &EC farm construction with transparent quotes and comprehensive
-            warranties. Contact us today and experience the difference a
-            reliable, expert roof makes.
-          </p>
+        <div className="section1">
+          <div className="part1" data-aos={'fade-left'} data-aos-delay={200}>
+            <img src={bg3} alt="404" />
+          </div>
+          <div className="part2">
+            <h1>Value for Money</h1>
+            <p>
+              As Chennai's finest industrial roofing contractors and also
+              excellent commercial roofers in Chennai, offering comprehensive
+              solutions for businesses of all sizes. Choosing the right industrial
+              roofing contractor is an investment in the longevity and
+              productivity for your project management. We offer exceptional value
+              with competitive pricing and comprehensive warranties. We also
+              provide Marriage hall construction, Rice mill construction, Poultry
+              &EC farm construction with transparent quotes and comprehensive
+              warranties. Contact us today and experience the difference a
+              reliable, expert roof makes.
+            </p>
+          </div>
         </div>
       </div>
       <div className="service">
@@ -333,17 +330,35 @@ function Home() {
       </div>
       <div className="Why_us">
         <div className="edge-top"></div>
-        <h3>Features</h3>
         <h1>Why Choose Us</h1>
         <div className="choose_wrap">{
-          Why_us_data.map(e => <Why_us title={e.title} icon={e.icon} content={e.content} />)
+          Why_us_data.map(e => <Why_us
+            title={e.title}
+            icon={e.icon}
+            content={e.content} />)
         }</div>
       </div>
       <div className="location">
         <div className="part1">
+          <img src={map} alt="404" />
         </div>
         <div className="part2">
-          <img src={map} alt="404" />
+          <div>
+            <h1>
+              Our Branches
+            </h1>
+            <p>
+              Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.
+              Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500,
+              cuando un impresor (N. del T. persona que se dedica a la imprenta)
+              desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.
+              No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos,
+              quedando esencialmente igual al original.
+              Fue popularizado en los 60s con la creación de las hojas "Letraset",
+              las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición,
+              como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
+            </p>
+          </div>
         </div>
       </div>
       <div className="footer">
