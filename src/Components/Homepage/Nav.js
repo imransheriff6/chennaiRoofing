@@ -2,11 +2,14 @@ import "./Nav.scss";
 import bg from "../Images/logo.png";
 import { Link } from "react-router-dom";
 import { FaBars, FaCross, FaEnvelope, FaFacebookF, FaInstagram, FaLinkedinIn, FaMapPin, FaPhone, FaPinterest, FaTwitter, FaXmark, FaYoutube } from "react-icons/fa6";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Aos from "aos";
 function Nav() {
-    const [slide, setSlide] = useState(false);
+    useEffect(() => {
+        Aos.init();
+    }, [])
     return <nav>
-        <div className="navbar">
+        <div className="navbar" data-aos="fade-in">
             <div className="navpart1">
                 <img src={bg} alt="404 Not found" />
             </div>
@@ -17,11 +20,25 @@ function Nav() {
                 <Link to={"/"}>Gallery</Link>
                 <Link to={"/"}>Contact</Link>
             </div>
-            <div className="navpart3" onClick={() => setSlide(true)}>
-                <FaBars className="i" />
+            <div className="contact-info">
+                <div className="contact">
+                    <Link ><FaPhone className="f-icon" />+91 75500 00206</Link>
+                    <a href="to-mail:sales@smartroofings.in" className="email-link"><FaEnvelope className="f-icon" />  sales@smartroofings.in</a>
+                </div>
+                <div className="icon-div">
+                    <Link className="i1"><FaFacebookF className="social" /></Link>
+                    <Link className="i2"><FaInstagram className="social" /></Link>
+                    <Link className="i3"><FaYoutube className="social" /></Link>
+                    <Link className="i4"><FaLinkedinIn className="social" /></Link>
+                    <Link className="i4"><FaTwitter className="social" /></Link>
+                    <Link className="i4"><FaPinterest className="social" /></Link>
+                </div>
             </div>
+            {/* <div className="navpart3" onClick={() => setSlide(true)}>
+                <FaBars className="i" />
+            </div> */}
         </div>
-        {slide && <div className="slide" data-aos="fade-left">
+        {/* {slide && <div className="slide" data-aos="fade-left">
             <div className="one1">
                 <div><FaXmark onClick={() => setSlide(false)} /></div>
                 <h2>Get In Touch</h2>
@@ -36,7 +53,7 @@ function Nav() {
                     <span className="i4"><FaTwitter className="social" /></span>
                     <span className="i4"><FaPinterest className="social" /></span>
                 </div>
-            </div></div>}
+            </div></div>} */}
     </nav>
 }
 export default Nav;

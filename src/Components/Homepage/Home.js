@@ -1,6 +1,6 @@
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import {
   FaCalendarDays,
   FaGear,
@@ -17,19 +17,19 @@ import {
   FaInstagram,
 } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import bg1 from "../Images/about-1.jpg";
-import bg2 from "../Images/about-2.jpg";
-import bg3 from "../Images/about-3.jpg";
+import bg from "../Images/logo.png";
+import bg1 from "../Images/Content 1.jpg";
+import bg2 from "../Images/Content 2.jpg";
+import bg3 from "../Images/Content 3.jpg";
 import bg4 from "../Images/service-1.jpg";
 import bg5 from "../Images/service-2.jpg";
 import bg6 from "../Images/service-3.jpg";
 import bg7 from "../Images/service-4.jpg";
 import bg8 from "../Images/service-5.jpg";
 import bg9 from "../Images/service-6.jpg";
-import bg10 from "../Images/service-1.jpg";
-import bg11 from "../Images/about-1.jpg";
+import bg10 from "../Images/Banner 1.jpg";
+import bg11 from "../Images/Banner 2.jpg";
 import bg12 from "../Images/logo.png";
-import bg13 from "../Images/designImage.webp";
 import g1 from "../Images/g1.jpg";
 import g2 from "../Images/g2.jpg";
 import g3 from "../Images/g3.jpg";
@@ -42,14 +42,26 @@ import icon3 from "../Images/icon3.png";
 import icon4 from "../Images/icon4.png";
 import icon5 from "../Images/icon5.png";
 import icon6 from "../Images/icon6.png";
+import bg_icon1 from "../Images/Innovation.png";
+import bg_icon2 from "../Images/client.png";
+import bg_icon3 from "../Images/on-time.png";
+import bg_icon4 from "../Images/improvement.png";
 import "./Home.scss";
 import Nav from "./Nav";
 import Block from "./block";
 import Service from "./service";
+import Why_us from "./whyus";
+import map from "../Images/tamilnadu map.png"
+import { Carousel } from "react-bootstrap";
+import DarkVariantExample from "./carousel";
 
 function Home() {
+  const [pop, setPop] = useState(false);
   useEffect(() => {
     Aos.init();
+    window.addEventListener("scroll", function () {
+      setPop(this.window.pageYOffset > 0)
+    })
   }, []);
 
   const data = [
@@ -122,10 +134,44 @@ function Home() {
       icon: icon6,
     },
   ];
+
+  const Why_us_data = [
+    {
+      icon: bg_icon1,
+      title: "High-tech innovation",
+      content: "We use advanced technology, integrating automation processes to ensures precision and enhances project outcomes with the automation process."
+    },
+    {
+      icon: bg_icon2,
+      title: "Excellent Client Service",
+      content: "Ensuring client happiness is our priority. We value clear communication, active teamwork and surpassing your expectations throughout the project."
+    },
+    {
+      icon: bg_icon3,
+      title: "On-time delivery",
+      content: "As a result of our innovative project management systems, we can effectively shorten the project's duration while maintaining the safety protocols."
+    },
+    {
+      icon: bg_icon4,
+      title: "Continuous Improvement",
+      content: "Chennairoofings is passionate about continuous improvement and development in the sector, including the laws and practical solutions for projects."
+    }
+  ]
   return (
     <div>
       <div className="Home">
-        <Nav />
+        {pop ? <div className="navbar-scroll" data-aos="fade-down">
+          <div className="navpart1">
+            <img src={bg} alt="404 Not found" />
+          </div>
+          <div className="navpart2">
+            <Link to={"/"}>Home</Link>
+            <Link to={"/"}>About Us</Link>
+            <Link to={"/"}>Services</Link>
+            <Link to={"/"}>Gallery</Link>
+            <Link to={"/"}>Contact</Link>
+          </div>
+        </div> : <Nav />}
         <div className="zoom">
           <img src={bg11} alt="404" />
           <img src={bg10} alt="404" />
@@ -135,7 +181,7 @@ function Home() {
         <div className="main_content">
           <div className="content">
             <h2 data-aos="fade-down">
-              With extensive Workmanship and experience in the industry for 60
+              With extensive Workmanship and experience in the industry for 15
               Years.
             </h2>
             <h1 data-aos="fade-right" data-aos-delay="100">
@@ -165,15 +211,6 @@ function Home() {
                 <span class="button-text">Call Us</span>
               </button>
             </div>
-            {/* <div className="btn banner-btn">
-              <Link data-aos="zoom-in" to={"/"}>
-                Read More
-              </Link>
-              <Link data-aos="zoom-in" to={"/"}>
-                {" "}
-                Call Us
-              </Link>
-            </div> */}
           </div>
         </div>
       </div>
@@ -193,28 +230,14 @@ function Home() {
       {/* About */}
 
       <div className="about">
-        <div className="part1">
-          <div className="inner">
-            <div className="tag">
-              <div>
-                <h1>15</h1>
-                <p>Years Experience</p>
-              </div>
-            </div>
-            <div className="innerpart3" data-aos="fade-left">
-              <img src={bg3} alt="404" />
-            </div>
-            <div className="innerpart2" data-aos="fade-right">
-              <img src={bg2} alt="404" />
-            </div>
-            <div className="innerpart1" data-aos="fade-right">
-              {" "}
-              <img src={bg1} alt="404" />
-            </div>
-            <div className="innerpart4" data-aos="fade-right">
-              <img src={bg13} alt="404" />
-            </div>
+        <div className="tag">
+          <div data-aos={'flip-down'} data-aos-delay={200}>
+            <h1>15</h1>
+            <p>Years Experience</p>
           </div>
+        </div>
+        <div className="part1" data-aos={'fade-left'} data-aos-delay={200}>
+          <img src={bg1} alt="404" />
         </div>
         <div className="part2">
           <h1 className="h1">About</h1>
@@ -231,6 +254,33 @@ function Home() {
             Building(PEB), Factory sheds, Metal building, Industrial sheds,
             Warehouse shed, EOT shed and Mezzanine floor.
           </p>
+        </div>
+        <div className="hide-part1">
+          <img src={bg3} alt="404" />
+        </div>
+        <div className="part3">
+          <h1>Value for Money</h1>
+          <p>
+            As Chennai's finest industrial roofing contractors and also
+            excellent commercial roofers in Chennai, offering comprehensive
+            solutions for businesses of all sizes. Choosing the right industrial
+            roofing contractor is an investment in the longevity and
+            productivity for your project management. We offer exceptional value
+            with competitive pricing and comprehensive warranties. We also
+            provide Marriage hall construction, Rice mill construction, Poultry
+            &EC farm construction with transparent quotes and comprehensive
+            warranties. Contact us today and experience the difference a
+            reliable, expert roof makes.
+          </p>
+        </div>
+        <div className="part4" data-aos={'fade-right'} data-aos-delay={200}>
+          <img src={bg2} alt="404" />
+        </div>
+        <div className="part5" data-aos={'fade-left'} data-aos-delay={200}>
+          <img src={bg3} alt="404" />
+        </div>
+        <div className="part6">
+          <h1>Value for Money</h1>
           <p>
             As Chennai's finest industrial roofing contractors and also
             excellent commercial roofers in Chennai, offering comprehensive
@@ -261,24 +311,39 @@ function Home() {
       <div className="gallery">
         <h1>Our Special Projects</h1>
         <div className="gallerywrap">
-          <div className="img1">
+          <div className="img">
             <img src={g1} alt="404" />
           </div>
-          <div className="img2">
+          <div className="img">
             <img src={g2} alt="404" />
           </div>
-          <div className="img3">
+          <div className="img">
             <img src={g3} alt="404" />
           </div>
-          <div className="img4">
+          <div className="img">
             <img src={g4} alt="404" />
           </div>
-          <div className="img5">
+          <div className="img">
             <img src={g5} alt="404" />
           </div>
-          <div className="img6">
+          <div className="img">
             <img src={g6} alt="404" />
           </div>
+        </div>
+      </div>
+      <div className="Why_us">
+        <div className="edge-top"></div>
+        <h3>Features</h3>
+        <h1>Why Choose Us</h1>
+        <div className="choose_wrap">{
+          Why_us_data.map(e => <Why_us title={e.title} icon={e.icon} content={e.content} />)
+        }</div>
+      </div>
+      <div className="location">
+        <div className="part1">
+        </div>
+        <div className="part2">
+          <img src={map} alt="404" />
         </div>
       </div>
       <div className="footer">

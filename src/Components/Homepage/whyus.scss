@@ -1,0 +1,79 @@
+@import '../../App.scss';
+
+.whyus_block {
+    width: 45%;
+    padding: 2%;
+    background-color: $dark;
+    margin-top: 2%;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 11;
+    color: $primary3;
+
+    .inner_div {
+        border: 1px dashed rgba(173, 181, 189, 0.3);
+        text-align: center;
+        padding: 1% 2%;
+        position: relative;
+
+        div {
+            width: 25%;
+            margin: 2% auto;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        p {
+            margin: 3%;
+        }
+    }
+
+    .inner_div::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 2px solid transparent;
+        border-top-color: $primary1;
+        border-left-color: $primary1;
+        height: 2rem;
+        width: 2rem;
+        margin: -1px;
+        transition: all .7s ease-in-out;
+    }
+
+    .inner_div::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        border: 2px solid transparent;
+        border-right-color: $primary1;
+        border-bottom-color: $primary1;
+        height: 2rem;
+        width: 2rem;
+        margin: -1px;
+        transition: all .7s ease-in-out;
+    }
+
+
+}
+
+.whyus_block:hover .inner_div::before {
+    height: 99%;
+    width: 99%;
+}
+
+.whyus_block:hover .inner_div::after {
+    height: 99%;
+    width: 99%;
+}
+
+
+@media only screen and (min-width:320px) and (max-width:480px) {
+    .whyus_block {
+        width: 100%;
+    }
+}

@@ -106,3 +106,9 @@
     animation-duration: 1s;
     animation-iteration-count: 1;
 }
+
+@media only screen and (min-width:320px) and (max-width:480px) {
+    .card {
+        width: 90%;
+    }
+}
