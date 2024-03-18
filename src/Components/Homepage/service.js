@@ -9,7 +9,7 @@ function Service(p) {
         <img src={p.image} alt="404" />
         <div className="overlay"></div>
         <div className="part2">
-          <div>
+          <div className="fig">
             <h2>{p.title}</h2>
             <p>{p.content}</p>
           </div>

@@ -15,6 +15,8 @@ import {
   FaAngleRight,
   FaPinterest,
   FaInstagram,
+  FaXmark,
+  FaBars,
 } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import bg from "../../Images/logo.png";
@@ -49,6 +51,7 @@ import ProductGallery from "../Slider/products/gallery";
 
 function Home() {
   const [pop, setPop] = useState(false);
+  const [slide, setSlide] = useState(false)
   useEffect(() => {
     Aos.init();
     window.addEventListener("scroll", function () {
@@ -168,15 +171,29 @@ function Home() {
               <Link to={"/"}>Gallery</Link>
               <Link to={"/"}>Contact</Link>
             </div>
+            <div className="navpart3" onClick={() => setSlide(true)}>
+              <FaBars className="i" />
+            </div>
+            {slide && <div className="slide" data-aos="fade-left">
+              <div className="one1">
+                <div><FaXmark onClick={() => setSlide(false)} /></div>
+                <h2>Get In Touch</h2>
+                <p><FaMapPin className="f-icon" /> No.33/20,Ramakrishnapuram 3rd  Street,West Mambalam,Chennai,Tamil Nadu,600033</p>
+                <p><FaPhone className="f-icon" />+91 75500 00206</p>
+                <p><FaEnvelope className="f-icon" />  sales@smartroofings.in</p>
+                <div className="icon">
+                  <span className="i1"><FaFacebookF className="social" /></span>
+                  <span className="i2"><FaInstagram className="social" /></span>
+                  <span className="i3"><FaYoutube className="social" /></span>
+                  <span className="i4"><FaLinkedinIn className="social" /></span>
+                  <span className="i4"><FaTwitter className="social" /></span>
+                  <span className="i4"><FaPinterest className="social" /></span>
+                </div>
+              </div></div>}
           </div>
         ) : (
           <Nav />
         )}
-        {/* <div className="zoom">
-          <img src={bg11} alt="404" />
-          <img src={bg10} alt="404" />
-          <img src={bg11} alt="404" />
-        </div> */}
         <div className="zoom">
           <BannerSlider />
         </div>
@@ -313,7 +330,11 @@ function Home() {
         <ProductGallery />
       </div>
       <div className="Why_us">
-        <div className="edge-top"></div>
+        <div className="edge-top">
+          <div className="part1"></div>
+          <div className="part2"></div>
+          <div className="part3"></div>
+        </div>
         <h1>Why Choose Us</h1>
         <div className="choose_wrap">
           {Why_us_data.map((e) => (

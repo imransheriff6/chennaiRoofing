@@ -1,13 +1,14 @@
 import "./Nav.scss";
 import bg from "../../Images/logo.png";
 import { Link } from "react-router-dom";
-import { FaBars, FaCross, FaEnvelope, FaFacebookF, FaInstagram, FaLinkedinIn, FaMapPin, FaPhone, FaPinterest, FaTwitter, FaXmark, FaYoutube } from "react-icons/fa6";
+import { FaBars, FaEnvelope, FaFacebookF, FaInstagram, FaLinkedinIn, FaMapPin, FaPhone, FaPinterest, FaTwitter, FaXmark, FaYoutube } from "react-icons/fa6";
 import { useEffect, useState } from "react";
 import Aos from "aos";
 function Nav() {
     useEffect(() => {
         Aos.init();
     }, [])
+    const [slide, setSlide] = useState(false)
     return <nav>
         <div className="navbar" data-aos="fade-in">
             <div className="navpart1">
@@ -34,11 +35,12 @@ function Nav() {
                     <Link className="i4"><FaPinterest className="social" /></Link>
                 </div>
             </div>
-            {/* <div className="navpart3" onClick={() => setSlide(true)}>
+            <div className="navpart3" onClick={() => setSlide(true)}>
                 <FaBars className="i" />
-            </div> */}
+            </div>
+
         </div>
-        {/* {slide && <div className="slide" data-aos="fade-left">
+        {slide && <div className="slide" data-aos="fade-left">
             <div className="one1">
                 <div><FaXmark onClick={() => setSlide(false)} /></div>
                 <h2>Get In Touch</h2>
@@ -53,7 +55,7 @@ function Nav() {
                     <span className="i4"><FaTwitter className="social" /></span>
                     <span className="i4"><FaPinterest className="social" /></span>
                 </div>
-            </div></div>} */}
+            </div></div>}
     </nav>
 }
 export default Nav;
