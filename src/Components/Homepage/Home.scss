@@ -909,3 +909,226 @@
 
 
 }
+
+@media only screen and (min-width:480px) and (max-width:768px) {
+    .Home {
+        .navbar-scroll {
+            .navpart1 {
+                width: 25%;
+            }
+
+            .navpart2 {
+                display: none;
+            }
+
+            .navpart3 {
+                display: block;
+            }
+        }
+
+        .main_content {
+            align-items: center;
+
+
+
+            .content {
+                h2 {
+                    font-size: 1.5rem;
+                }
+
+                h1 {
+                    font-size: 3rem;
+                }
+
+                p {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+    .blockwrap {
+        padding: 17% 3% 7%;
+        gap: 4rem
+    }
+
+    .about {
+        .tag {
+            display: none;
+        }
+
+
+        .section1 {
+            flex-wrap: wrap-reverse;
+
+            .part2 {
+
+                h1 {
+                    font-size: 3rem;
+                }
+
+                .h1::before {
+                    top: 8%;
+                    left: 28%;
+                }
+
+                .h1::after {
+                    top: 9%;
+                    left: 28%;
+                }
+
+                p {
+                    font-size: 1.25rem;
+                    line-height: 2rem;
+                }
+            }
+
+            .part2,
+            .part1 {
+                width: 90%;
+            }
+
+        }
+
+        .section2 {
+
+            .part3,
+            .part4 {
+                width: 90%;
+
+                h1 {
+                    font-size: 3rem;
+                }
+
+                p {
+                    font-size: 1.25rem;
+                    line-height: 2rem;
+                }
+            }
+
+        }
+
+
+    }
+
+    .service {
+        h1 {
+            font-size: 3rem;
+        }
+    }
+
+    .gallery {
+        h1 {
+            font-size: 3rem;
+        }
+    }
+
+    .Why_us {
+        h1 {
+            font-size: 3rem;
+        }
+
+        .choose_wrap {
+            margin: 0 6%;
+        }
+    }
+
+    .location {
+        flex-wrap: wrap-reverse;
+        padding: 5% 10%;
+
+        .part1 {
+            width: 100%;
+        }
+
+        .part2 {
+            width: 100%;
+
+            h1 {
+                font-size: 3rem;
+            }
+
+            p {
+                font-size: 1.25rem;
+            }
+        }
+
+    }
+
+
+    .footer {
+        margin: 0;
+    }
+
+    .one {
+        width: 45%;
+    }
+
+    .two {
+        width: 45%;
+    }
+
+    .three {
+        width: 45%;
+    }
+
+    .four {
+        width: 45%;
+    }
+
+    .four a {
+        top: 90%;
+        padding: 2%;
+
+    }
+
+    .five {
+        margin: 10% 0 0 0;
+        justify-content: center;
+        font-size: 1rem;
+    }
+
+    .five-1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .five-2 {
+        width: 100%;
+        text-align: center;
+        margin-top: 3%;
+    }
+
+    .five .small {
+        margin-left: 3%;
+        width: 3% !important;
+    }
+
+    .f-a {
+        width: 8%;
+    }
+
+    .five small {
+        width: 60%;
+    }
+
+    .a-center {
+
+        margin: 2% 31%;
+        margin-top: 3%;
+    }
+
+    .f-a {
+        margin-top: 3%;
+        width: 15%;
+    }
+
+    .m-l {
+        margin-left: 0%;
+    }
+
+
+
+
+
+}

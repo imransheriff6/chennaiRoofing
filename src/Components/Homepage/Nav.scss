@@ -208,3 +208,63 @@
     width: 50%;
     height: 3px
 }
+
+
+@media only screen and (min-width:480px) and (max-width:768px) {
+    .navbar {
+
+        .navpart1 {
+            width: 25%;
+        }
+
+        .navpart2 {
+            display: none;
+        }
+
+        .navpart3 {
+            display: block;
+        }
+
+        .contact-info {
+            display: none;
+
+
+        }
+
+    }
+
+}
+
+.underline-closing:after,
+.underline-closing:before {
+    position: absolute;
+    z-index: -1
+}
+
+.underline-closing:after {
+    content: "";
+    width: 3px;
+    height: 3px;
+    bottom: 0;
+    left: 0
+}
+
+.underline-closing:focus:after,
+.underline-closing:hover:after {
+    width: 50%;
+    height: 3px
+}
+
+.underline-closing:before {
+    content: "";
+    width: 3px;
+    height: 3px;
+    bottom: 0;
+    right: 0
+}
+
+.underline-closing:focus:before,
+.underline-closing:hover:before {
+    width: 50%;
+    height: 3px
+}
