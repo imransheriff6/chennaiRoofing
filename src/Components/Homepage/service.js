@@ -14,6 +14,11 @@ function Service(p) {
             <p>{p.content}</p>
           </div>
         </div>
+        <div className="part3">
+          <div className="fig">
+            <h2 >{p.title}</h2>
+          </div>
+        </div>
       </div>
     </div>
   );
